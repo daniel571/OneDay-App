@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/UserConstLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.technion.nssl.oneday.user_profile">
+
+
+    <ScrollView
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/VolunteerView"
+                android:layout_alignRight="@+id/VolunteerView"
+                android:layout_below="@+id/VolKinds"
+                android:layout_marginTop="32dp"
+                android:inputType="textPersonName"
+                android:text="Done" />
+
+            <TextView
+                android:id="@+id/MyEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/EmailView"
+                android:layout_alignStart="@+id/EmailView"
+                android:layout_below="@+id/EmailView"
+                android:layout_marginTop="7dp"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/MyPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/PhoneView"
+                android:layout_alignStart="@+id/PhoneView"
+                android:layout_below="@+id/PhoneView"
+                android:layout_marginTop="7dp"
+                android:gravity="start"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/MyOccupation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/EmailView"
+                android:layout_alignStart="@+id/EmailView"
+                android:layout_below="@+id/OccupationView"
+                android:layout_marginTop="7dp"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/MyBirthYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/EmailView"
+                android:layout_alignStart="@+id/EmailView"
+                android:layout_below="@+id/BirthYearView"
+                android:layout_marginTop="7dp"
+                android:inputType="textPersonName"
+                android:text=""
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+
+            <TextView
+                android:id="@+id/PhoneView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:text="Phone number"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/EditPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/PhoneView"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/PhoneView"
+                android:layout_toLeftOf="@+id/chg_email_butn"
+                android:layout_toStartOf="@+id/chg_email_butn"
+                android:ems="10"
+                android:inputType="phone"
+                android:text="Name"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/chg_phone_butn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/EditPhone"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toEndOf="@+id/EditPhone"
+                android:layout_toRightOf="@+id/EditPhone"
+                android:text="Edit"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/EmailView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/PhoneView"
+                android:layout_below="@+id/EditPhone"
+                android:layout_marginTop="9dp"
+                android:text="Email"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/EditEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/MyEmail"
+                android:layout_alignStart="@+id/MyEmail"
+                android:layout_below="@+id/EmailView"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:text="Name"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/chg_email_butn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/EditEmail"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toEndOf="@+id/EditEmail"
+                android:layout_toRightOf="@+id/EditEmail"
+                android:text="Edit"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/LocationView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/EmailView"
+                android:layout_alignStart="@+id/EditPhone"
+                android:layout_below="@+id/EditEmail"
+                android:layout_marginTop="9dp"
+                android:text="Location"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/Change_city_sp"
+                android:layout_width="wrap_content"
+                android:layout_alignLeft="@id/LocationView"
+                android:layout_below="@+id/LocationView"
+                android:layout_alignEnd="@id/EditEmail"
+                android:layout_alignRight="@id/EditEmail"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/OccupationView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/EmailView"
+                android:layout_alignStart="@+id/EditPhone"
+                android:layout_below="@+id/Change_city_sp"
+                android:layout_marginTop="9dp"
+                android:text="Occupation"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/EditOccupation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/OccupationView"
+                android:layout_below="@+id/OccupationView"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/chg_occupation_butn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/EditOccupation"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toEndOf="@+id/EditOccupation"
+                android:layout_toRightOf="@+id/EditOccupation"
+                android:text="Edit"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/BirthYearView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/EmailView"
+                android:layout_alignStart="@+id/EditPhone"
+                android:layout_below="@+id/EditOccupation"
+                android:layout_marginTop="9dp"
+                android:text="Birth Year"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/EditBirthYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/OccupationView"
+                android:layout_below="@+id/BirthYearView"
+                android:ems="10"
+                android:inputType="number"
+                android:text="1980"
+                android:visibility="invisible" />
+
+            <Button
+                android:id="@+id/chg_birthyear_butn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/EditBirthYear"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toEndOf="@+id/EditBirthYear"
+                android:layout_toRightOf="@+id/EditBirthYear"
+                android:text="Edit"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/StudentView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/EmailView"
+                android:layout_alignStart="@+id/EditPhone"
+                android:layout_below="@+id/chg_birthyear_butn"
+                android:layout_marginTop="9dp"
+                android:text="Student"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/ChangeStudent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/StudentView"
+                android:text=""
+                android:textSize="24sp" />
+
+
+            <TextView
+                android:id="@+id/GenderView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/EmailView"
+                android:layout_alignStart="@+id/EditPhone"
+                android:layout_below="@+id/ChangeStudent"
+                android:layout_marginTop="9dp"
+                android:text="Gender"
+                android:textSize="24sp" />
+
+            <Spinner
+                android:id="@+id/ChangeGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/OccupationView"
+                android:layout_alignRight="@id/OccupationView"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/GenderView" />
+
+            <TextView
+                android:id="@+id/CarpoolView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/EmailView"
+                android:layout_alignStart="@+id/EditPhone"
+                android:layout_below="@+id/ChangeGender"
+                android:layout_marginTop="9dp"
+                android:text="Want to give a ride?"
+                android:textSize="24sp" />
+
+            <CheckBox
+                android:id="@+id/IsCarPool"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/CarpoolView"
+                android:text="" />
+
+
+            <TextView
+                android:id="@+id/VolunteerView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/LocationView"
+                android:layout_alignStart="@+id/EditPhone"
+                android:layout_below="@+id/IsCarPool"
+                android:layout_marginTop="12dp"
+                android:text="Preferred categories"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/chg_kinds_butn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/VolKinds"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@+id/EditBirthYear"
+                android:text="Edit"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/VolKinds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/VolunteerView"
+                android:layout_alignRight="@id/VolunteerView"
+                android:layout_alignLeft="@+id/VolunteerView"
+                android:layout_alignStart="@+id/VolunteerView"
+                android:layout_below="@+id/VolunteerView"
+                android:layout_marginTop="7dp"
+                android:text="TextView"
+                android:textSize="18sp" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
