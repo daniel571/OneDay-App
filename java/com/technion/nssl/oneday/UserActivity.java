@@ -85,6 +85,22 @@ public class UserActivity extends AppCompatActivity {
         });
     }
 
+    private void NotifyServerTHirt() {
+        String email = ((OneDay)this.getApplication()).Contact_mail;
+        String subject = "User " + fbid +" TShirt awarded";
+        user my_user = ((OneDay)this.getApplication()).my_user;
+        try {
+            String message = "Hi Admin, The user " + my_user.getFirstName() + " " + my_user.getLastName() + " complete 100 hours of volunteering.\nAnd shall awarded with a TShirt." + "Email: " + my_user.getEmail() + "\n";
+            SendMail sm = new SendMail(email, subject, message);
+            //Executing sendmail to send email
+            sm.execute();
+        }
+        catch (NullPointerException ex){
+            Log.e("UserError","User is not fully recognize in the server");
+        }
+        //Creating SendMail object
+    }
+
     @Override
     protected void onResume(){
         super.onResume();
@@ -199,6 +215,11 @@ public class UserActivity extends AppCompatActivity {
                     Preferred_str.deleteCharAt(1);
                     Preferred_str.append(".");
                     preferencesView.append(Preferred_str.toString());
+                }
+                if ((my_user.getHourCounter() >= 100) && !((OneDay)A.getApplication()).ServerTShirtNotification)
+                {
+                    ((OneDay)A.getApplication()).ServerTShirtNotification = true;
+                    NotifyServerTHirt();
                 }
             } catch (JSONException e) {
                 e.printStackTrace();
